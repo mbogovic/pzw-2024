@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <bean id="superman" class="org.example.Superman" primary="true" >
+        <property name="name" value="Superman" />
+    </bean>
+    <bean id="batman" class="org.example.Batman" scope="prototype">
+        <constructor-arg name="name" value="Batman" />
+    </bean>
+    <bean id="police" class="org.example.Police" autowire="constructor" />
+
+
+</beans>
